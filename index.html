@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #F5F5F5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .calculator {
+            background: #ece9e9;
+            padding: 20px;
+            height: 410px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(7, 7, 7, 0.3);
+        }
+
+        #dis {
+            display: grid;
+            border: none;
+            background: #e3e4df;
+            color: #212121;
+            font-size: 20px;
+            box-sizing: border-box;
+            text-align: right;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .display {
+            width: 100%;
+            height: 60px;
+            background: #e3e4df;
+            color: #080808;
+            text-align: right;
+            font-size: 2em;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            display: grid;
+            border: none;
+        }
+
+        #inpu {
+            height: 60px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            background: #E0E0E0;
+            color: #212121;
+            cursor: pointer;
+            transition: background 0.2s;
+            display: grid;
+            grid-template-columns: repeat(4, 60px);
+            grid-gap: 10px;
+
+        }
+
+        .buttons {
+            width: 60px;
+            margin-right: 210px;
+        }
+
+        .buttons:hover {
+            background: #FFB74D;
+        }
+
+        #inpu input.operator {
+            background-color: #FFB74D;
+        }
+
+        #inpu input.clear {
+            background-color: #FFB74D;
+        }
+
+        #inpu input.operator {
+            background-color: #FFB74D;
+        }
+
+        #inpu input.equal {
+            background-color: #FFB74D;
+            grid-column: span 2;
+        }
+    </style>
+
+</head>
+
+<body>
+    <center>
+        <h1>Calculator</h1>
+        <div class="calculator" id="cal">
+            <form name="cal">
+                <div class="display" id="dis">
+
+                    <input type="text" id="dis" placeholder="0" name="text">
+                </div>
+                <div class="buttons" id="inpu">
+                    <input type="button" value="C" name="clear" id="inpu" class="clear" onclick="cal.text.value=''">
+                    <input type="button" value="(" name="(" id="inpu" class="buttons" onclick="cal.text.value='('">
+                    <input type="button" value=")" name=")" id="inpu" class="buttons" onclick="cal.text.value=')'">
+                    <input type="button" value="÷" name="÷" id="inpu" class="operator" onclick="cal.text.value+='/'">
+
+                    <input type="button" value="7" name="7" id="inpu" class="buttons" onclick="cal.text.value+=7">
+                    <input type="button" value="8" name="8" id="inpu" class="buttons" onclick="cal.text.value+=8">
+                    <input type="button" value="9" name="9" id="inpu" class="buttons" onclick="cal.text.value+=9">
+                    <input type="button" value="×" name="×" id="inpu" class="operator" onclick="cal.text.value+='*'">
+
+                    <input type="button" value="4" name="4" id="inpu" class="buttons" onclick="cal.text.value+=4">
+                    <input type="button" value="5" name="5" id="inpu" class="buttons" onclick="cal.text.value+=5">
+                    <input type="button" value="6" name="6" id="inpu" class="buttons" onclick="cal.text.value+=6">
+                    <input type="button" value="-" name="-" id="inpu" class="operator" onclick="cal.text.value+='-'">
+
+                    <input type="button" value="1" name="1" id="inpu" class="buttons" onclick="cal.text.value+=1">
+                    <input type="button" value="2" name="2" id="inpu" class="buttons" onclick="cal.text.value+=2">
+                    <input type="button" value="3" name="3" id="inpu" class="buttons" onclick="cal.text.value+=3">
+                    <input type="button" value="+" name="+" id="inpu" class="operator" onclick="cal.text.value+='+'">
+
+                    <input type="button" value="0" name="0" id="inpu" class="buttons" onclick="cal.text.value+= 0">
+                    <input type="button" value="." name="." id="inpu" class="buttons" onclick="cal.text.value+= '.'">
+                    <input type="button" name="=" value="=" id="inpu" class="equal" onclick="cal.text.value=eval(cal.text.value)">
+
+
+
+            </form>
+
+        </div>
+        </div>
+    </center>
+</body>
+
+</html>
